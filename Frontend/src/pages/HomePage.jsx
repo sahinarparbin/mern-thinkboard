@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/NavBar";
 import RateLimitedUI from "../components/RateLimitedUI";
 import { useEffect } from "react";
 import api from "../lib/axios";
@@ -15,6 +15,7 @@ const HomePage = () => {
   useEffect(() => {
     const fetchNotes = async () => {
       try {
+        
         const res = await api.get("/notes");
         console.log(res.data);
         setNotes(res.data);

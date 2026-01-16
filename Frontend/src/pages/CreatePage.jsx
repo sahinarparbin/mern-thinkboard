@@ -28,7 +28,7 @@ const CreatePage = () => {
         content,
       });
 
-      // api.post("/users")
+      api.get("/notes")
       toast.success("Noted create successfully")
       Navigate("/")
 
